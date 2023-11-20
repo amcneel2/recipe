@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+html {
+    background-color: rgba(122, 191, 191, .5);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 414px;
+    background-color: #F2F2F2;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: #0D0D0D;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: #0D0D0D;
+    text-align: center;
+    padding: 20px;
+}
+
+h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25px;
+    color: #0D0D0D;
+    text-align: left;
+}
+
+nav {
+    padding-bottom: 10px;
+}
+
+nav li {
+    width:200px;
+    padding: 10px;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+nav li:hover {
+    background-color: rgba(122, 191, 191, .5);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+nav a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #EB5428;
+    text-decoration: none;
+}
+
+nav span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #EB5428;
+}
+
+form {
+    width: 100%;
+    text-align:center;
+    padding-bottom: 30px;
+}
+
+.search input[type=text] {
+    padding: 5px;
+    background-color: white;
+    width: 60%;
+    border: solid 2px #EB5428;
+  }
+  
+  .search button {
+    padding: 6px 10px;
+    background: #EB5428;
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border: solid 1px #EB5428;
+  }
+
+menu li {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #EB5428;
+}
+
+#social li {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #EB5428;
+}
+
+footer {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #0D0D0D;
+    background-color: white;
+    height: 200px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+p, dd, li, nav, input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+p {
+    line-height: 1.5em;
+    padding: 5px;
+}
+
+.street {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+dt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+aside ul {
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 5px;
+}
+
+aside li {
+    padding-bottom: 10px;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position:outside;
+    padding-left: 20px;
+}
+
+ol li {
+    padding-bottom: 15px;
+    line-height: normal;
+    text-align: start;
+    padding-left: 0px;
+}
+
+nav h2 {
+    display: none;
+}
+
+#dimming img {
+    width: 100%;
+}
+
+#side-dishes {
+    background-color: #7ABFBF;
+}
+
+.side img {
+    width: 50%;
+}
+
+.side {
+    display: grid;
+    grid-template-columns: 1FR 1FR;
+}
+
+footer img {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+small {
+    text-align: center;
+}
+
+@media screen and (min-width: 414px) {
+    nav ul {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+  }
+  label {
+      cursor: pointer;
+      display: inline-block;
+      padding: 28px 20px;
+      position: relative;
+      user-select: none;
+  }
+  label span:before {
+      top: 5px;
+  }
+  label span:after {
+      top: -5px;
+  }
+  nav input {
+      display: none;
+  }
+  nav input:checked ~ ul {
+      max-height: 500px;
+  }
+  nav input:checked ~ label span {
+      background: transparent;
+  }
+  nav input:checked ~ label span:before {
+      transform: rotate(-45deg);
+  }
+  nav input:checked ~ label span:after {
+      transform: rotate(45deg);
+  }
+  nav input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+      top: 0;
+  }
+}
