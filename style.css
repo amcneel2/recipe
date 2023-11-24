@@ -47,6 +47,7 @@ table {
 }
 
 
+/*global styles*/
 
 html {
     background-color: rgba(122, 191, 191, .5);
@@ -83,7 +84,7 @@ h3 {
 }
 
 nav {
-    padding-bottom: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 nav li {
@@ -115,6 +116,7 @@ nav span {
 form {
     width: 100%;
     text-align:center;
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -123,9 +125,9 @@ form {
     background-color: white;
     width: 60%;
     border: solid 2px #EB5428;
-  }
+}
   
-  .search button {
+.search button {
     padding: 6px 10px;
     background: #EB5428;
     color: white;
@@ -133,7 +135,7 @@ form {
     border: none;
     cursor: pointer;
     border: solid 1px #EB5428;
-  }
+}
 
 menu li {
     font-family: 'Bebas Neue', sans-serif;
@@ -152,12 +154,12 @@ footer {
     font-size: 20px;
     color: #0D0D0D;
     background-color: white;
-    height: 200px;
+    height: 250px;
     padding: 20px;
     margin-top: 20px;
 }
 
-p, dd, li, nav, input {
+p, li, nav, input {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
@@ -167,15 +169,13 @@ p {
     padding: 5px;
 }
 
+p span {
+    padding-right: 10px;
+}
+
 .street {
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-dt {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
 }
 
 aside ul {
@@ -215,23 +215,94 @@ nav h2 {
 
 .side img {
     width: 50%;
+    padding-left: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 .side {
     display: grid;
     grid-template-columns: 1FR 1FR;
+    padding-bottom: 50px;
+}
+
+.side h3, .side p, .stars {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.side p {
+    position: relative;
+    z-index: 1000;
+    top: 25px;
+}
+
+.side > p span {
+    position: relative;
+    z-index: 1000;
+    top: 50px;
+}
+
+.stars {
+    display: inline-block;
+    position: relative;
+    z-index: 1000;
+    top: 100px;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: 1FR 2FR 1FR;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.kitchen, .circle {
+    display: block;
+    margin: 0 auto;
+}
+
+.kitchen-bg {
+    height: 100%;
+    background-color: #EB5428;
+}
+
+#logo-grid {
+    display: grid;
+    grid-template-columns: 1FR 1FR 1FR 1FR;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.save, .share, .print, .jump {
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 footer img {
-    display: block;
     width: 40%;
     margin: 0 auto;
     padding-bottom: 20px;
 }
 
-small {
-    text-align: center;
+small, .socials {
+    margin: 0 auto;
 }
+
+
+/*media screens */
 
 @media screen and (min-width: 414px) {
     nav ul {
@@ -270,4 +341,18 @@ small {
   nav input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
       top: 0;
   }
+}
+
+@media screen and (min-width: 768px) {
+
+
+
+
+}
+
+@media screen and (min-width: 1280px) {
+
+
+
+
 }
