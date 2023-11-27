@@ -47,7 +47,7 @@ table {
 }
 
 
-/*global styles*/
+/*mobile-first styles*/
 
 html {
     background-color: rgba(122, 191, 191, .5);
@@ -307,6 +307,13 @@ footer img {
 small, .socials {
     margin: 0 auto;
 }
+/*for print extra cred*/
+#google {
+    text-decoration: none;
+    color: black;
+}
+
+
 
 
 /*media screens */
@@ -316,6 +323,9 @@ small, .socials {
       overflow: hidden;
       max-height: 0;
       transition: max-height .2s ease-out;
+  }
+  #images {
+    display: none;
   }
   label {
       cursor: pointer;
@@ -351,9 +361,51 @@ small, .socials {
   }
 }
 
+
+
+
 @media screen and (min-width: 768px) {
     body {
         width: 768px;
+    }
+    #dropdown, label {
+        display: none;
+    }
+    nav {
+        height: 200px;
+    }
+    .kitchen {
+        position: relative;
+        top: 20px;
+        left: 0;
+    }
+    .kitchen-bg {
+        height: 100px;
+        width: 90px;
+    }
+    .search, .circle {
+        display: grid;
+        grid-template-columns: 1FR 1FR 1FR;
+    }
+    .search {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    form {
+        width: 30%;
+        position: absolute;
+        right: 200px;
+        top: 10px;
+    }
+    .circle {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        position: relative;
+        top: 10px;
+        right: 0px;
+    }
+    h1 {
+        padding-top: 10px;
     }
     figcaption {
         text-align: center;
@@ -396,9 +448,14 @@ small, .socials {
     }
 }
 
+
+
 @media screen and (min-width: 1280px) {
     body {
         width: 1280px;
+    }
+    nav {
+        height: 100px;
     }
     h1 {
         text-align: center;
@@ -504,5 +561,14 @@ footer img, small {
 
 footer img {
     width: 30%;
+}
+form {
+    width: 100%;
+    text-align:center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    left: 100%;
+    right: auto;
 }
 }
